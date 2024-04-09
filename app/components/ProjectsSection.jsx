@@ -7,57 +7,57 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Brainy Counsellor",
+    description: "GPT-3.5-turbo chatbot that helps students choose a career path, based on their interests and personality type.",
+    image: "/images/projects/1.jpeg",
+    tag: ["All", "GenAI"],
+    gitUrl: "https://github.com/ayam04/BrainyCs",
+    previewUrl: "/#projects",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Scanned PDF to BRF Converter",
+    description: "Combines LLM, OCR, and image captioning to convert scanned PDFs into braille-readable formats with image contextualization.",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "GenAI"],
+    gitUrl: "/#projects",
+    previewUrl: "/#projects",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Multimodal Tumor Detection System",
+    description: "A classical ML based system that detects tumors in MRI scans using image processing and ML techniques.",
+    image: "/images/projects/3.jpeg",
+    tag: ["All", "ML"],
+    gitUrl: "https://github.com/ayam04/PyTumorDetection",
+    previewUrl: "https://mri-scan-predictor.streamlit.app",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Admin Dashboard",
+    description: "A React based admin dashboard template for web applications.",
+    image: "/images/projects/4.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/ayam04/admin-dashboard",
+    previewUrl: "/#projects",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "Portfolio Website",
+    description: "A Next.js and Tailwind CSS based portfolio website for personal use.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/ayam04/portfolio",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "Email Marketing AI",
+    description: "A mistral-7b and langchain based marketing bot that sends out and writes marketing emails for a list of tagret users, after considering their interests and basic information.",
     image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "GenAI"],
+    gitUrl: "https://github.com/ayam04/streamlit-email-llm",
+    previewUrl: "https://email-llm.streamlit.app/",
   },
 ];
 
@@ -92,13 +92,18 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="ML"
+          isSelected={tag === "ML"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="GenAI"
+          isSelected={tag === "GenAI"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Web"
+          isSelected={tag === "Web"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
