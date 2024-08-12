@@ -10,12 +10,11 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Python, Java</li>
-        <li>MySQL, MongoDB</li>
-        <li>FastAPI, Flask</li>
-        <li>React.js</li>
-        <li>Next.js</li>
-        <li>HTML</li>
-        <li>Tailwind CSS</li>
+        <li>MySQL, MongoDB, PostgreSQL</li>
+        <li>FastAPI, Flask, Django</li>
+        <li>React.js, Next.js</li>
+        <li>AWS, Google Cloud, Digital Ocean, Heroku</li>
+        <li>HTML, Tailwind CSS</li>
         <li>JavaScript</li>
       </ul>
     ),
@@ -28,6 +27,7 @@ const TAB_DATA = [
         <li>Manipal University Jaipur</li>
         <li>Indian Institute of Technology, Madras</li>
         <li>Army Public School, Pune</li>
+        <li>Sultan Qaboos University, Oman</li>
       </ul>
     ),
   },
