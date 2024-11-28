@@ -15,6 +15,15 @@ const projectsData = [
     previewUrl: "/#projects",
   },
   {
+    id: 7,
+    title: "Multi Agent RAG Customer Support",
+    description: "A customer support system uses MongoDB, FAISS, and OpenAI to retrieve and generate responses from transcribed videos, PDFs, and documents.",
+    image: "/images/projects/7.png",
+    tag: ["All", "GenAI"],
+    gitUrl: "https://github.com/ayam04/multi-rag-customer-support",
+    previewUrl: "/",
+  },
+  {
     id: 2,
     title: "Scanned PDF to BRF Converter",
     description: "Combines LLM, OCR, and image captioning to convert scanned PDFs into braille-readable formats with image contextualization.",
