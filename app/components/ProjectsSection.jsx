@@ -53,7 +53,7 @@ const projectsData = [
   {
     id: 5,
     title: "Contract Farma",
-    description: "A Full Stack App for Cantract Farming tools for local farmers to sell their crops on a contractual basis, all over the country.",
+    description: "A Full Stack App for Contract Farming Tools, built with HTML, CSS and Node.js, enabling local farmers to sell crops on a contractual basis nationwide.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/ayam04/Contract-Farming",
