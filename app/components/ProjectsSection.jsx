@@ -52,11 +52,11 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    description: "A Next.js and Tailwind CSS based portfolio website for personal use.",
+    title: "Contract Farma",
+    description: "A Full Stack App for Cantract Farming tools for local farmers to sell their crops on a contractual basis, all over the country.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/ayam04/portfolio",
+    gitUrl: "https://github.com/ayam04/Contract-Farming",
     previewUrl: "/",
   },
   {
