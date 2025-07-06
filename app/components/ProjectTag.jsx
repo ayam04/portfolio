@@ -1,12 +1,14 @@
 import React from "react";
+import { Star, Bot, Brain, Globe, Folder } from "lucide-react";
 
 const ProjectTag = ({ name, onClick, isSelected }) => {
-  const buttonStyles = isSelected
-    ? "text-white border-primary-500"
-    : "text-[#ADB7BE] border-slate-600 hover:border-white";
   return (
     <button
-      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+      className={`px-0 py-2 font-light transition-all duration-300 text-sm uppercase tracking-wider border-b-2 ${
+        isSelected
+          ? "text-gray-900 border-gray-900"
+          : "text-gray-500 hover:text-gray-900 border-transparent hover:border-gray-300"
+      }`}
       onClick={() => onClick(name)}
     >
       {name}

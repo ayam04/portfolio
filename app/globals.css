@@ -3,25 +3,148 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: 17, 24, 39;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  letter-spacing: -0.01em; /* Hide default cursor */
+  /* Performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Show default cursor on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: default;
+  }
+  
+  .cursor-main,
+  .cursor-dot {
+    display: none; /* Hide custom cursors on mobile */
+  }
+}
+
+/* Performance: Use CSS transforms instead of changing layout properties */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+/* Optimize for GPU acceleration */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Selection styles */
+::selection {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #6b7280;
+  outline-offset: 2px;
+}
+
+/* Typography enhancements for editorial look */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.editorial-title {
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+/* Optimized smooth transitions - reduced for performance */
+* {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Custom cursor styles */
+.cursor-main {
+  mix-blend-mode: difference;
+  backdrop-filter: blur(1px);
+}
+
+.cursor-dot {
+  mix-blend-mode: normal;
+}
+
+/* Ensure interactive elements show pointer cursor on devices that support it */
+@media (hover: hover) and (pointer: fine) {
+  a, button, [role="button"] {
+    cursor: pointer;
+  }
+}
+
+/* Image optimization classes */
+.optimized-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize for mobile performance */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    will-change: auto;
+    transform: none;
+  }
 }
