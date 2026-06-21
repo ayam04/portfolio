@@ -1,21 +1,35 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Space_Grotesk, Instrument_Serif } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next';
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  preload: true,
-  variable: '--font-inter'
+  variable: '--font-inter',
+})
+
+const display = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-display',
+})
+
+const serif = Instrument_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
 })
 
 export const metadata = {
   title: {
-    default: 'Ayamullah Khan - AI Developer & Data Scientist',
+    default: 'Ayamullah Khan — AI Engineer',
     template: '%s | Ayamullah Khan'
   },
-  description: 'AI Developer & Computer Science student building practical solutions that bridge technology and human needs. Specialized in GenAI, Machine Learning, and Web Development.',
-  keywords: ['AI Developer', 'Data Scientist', 'Machine Learning', 'GenAI', 'Web Development', 'Computer Science'],
+  description: 'AI Engineer specializing in LLM fine-tuning (LoRA/QLoRA), model quantization and inference optimization, and agentic systems — plus the full-stack products around them. Shipped AI tools used by thousands. Open to AI/ML engineering roles.',
+  keywords: ['AI Engineer', 'Machine Learning Engineer', 'LLM Fine-Tuning', 'LoRA', 'QLoRA', 'Model Quantization', 'Inference Optimization', 'vLLM', 'RLHF', 'AI Agents', 'MLOps', 'GenAI', 'Full Stack Developer'],
   authors: [{ name: 'Ayamullah Khan' }],
   creator: 'Ayamullah Khan',
   publisher: 'Ayamullah Khan',
@@ -32,14 +46,14 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ayamullah-khan.vercel.app',
-    title: 'Ayamullah Khan - AI Developer & Data Scientist',
-    description: 'AI Developer & Computer Science student building practical solutions that bridge technology and human needs.',
-    siteName: 'Ayamullah Khan Portfolio',
+    title: 'Ayamullah Khan — AI Engineer',
+    description: 'AI Engineer specializing in LLM fine-tuning, quantization, and agentic systems. Shipped AI tools used by thousands. Open to AI/ML engineering roles.',
+    siteName: 'Ayamullah Khan',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ayamullah Khan - AI Developer & Data Scientist',
-    description: 'AI Developer & Computer Science student building practical solutions that bridge technology and human needs.',
+    title: 'Ayamullah Khan — AI Engineer',
+    description: 'AI Engineer specializing in LLM fine-tuning, quantization, and agentic systems. Open to AI/ML engineering roles.',
   },
   robots: {
     index: true,
@@ -54,20 +68,70 @@ export const metadata = {
   },
 }
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ayamullah Khan",
+  url: "https://ayamullah-khan.vercel.app",
+  jobTitle: "AI Engineer",
+  description:
+    "AI Engineer specializing in LLM fine-tuning (LoRA/QLoRA), model quantization and inference optimization, and agentic systems, plus the full-stack products around them.",
+  image: "https://ayamullah-khan.vercel.app/images/IMG_7779.png",
+  email: "mailto:ayamullahkhan04@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "New Delhi",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://github.com/ayam04",
+    "https://linkedin.com/in/ayam04",
+    "https://leetlingo.site",
+  ],
+  knowsAbout: [
+    "LLM fine-tuning",
+    "LoRA",
+    "QLoRA",
+    "PEFT",
+    "RLHF",
+    "DPO",
+    "Model quantization",
+    "Inference optimization",
+    "vLLM",
+    "TensorRT-LLM",
+    "Knowledge distillation",
+    "Multi-agent systems",
+    "Retrieval-augmented generation",
+    "MLOps",
+    "Machine learning",
+    "Computer vision",
+    "Natural language processing",
+    "Full-stack development",
+  ],
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "Manipal University Jaipur" },
+    { "@type": "CollegeOrUniversity", name: "Indian Institute of Technology, Madras" },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${display.variable} ${serif.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.prod.website-files.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://media.gettyimages.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#0a0a0a" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={`${inter.className} font-sans`}>
+      <body className={inter.className}>
         {children}
         <Analytics />
       </body>

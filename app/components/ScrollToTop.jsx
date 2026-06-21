@@ -1,17 +1,16 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
-import { ChevronUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Throttle scroll events for better performance
   const throttle = (func, delay) => {
     let timeoutId;
     let lastExecTime = 0;
     return function (...args) {
       const currentTime = Date.now();
-      
       if (currentTime - lastExecTime > delay) {
         func.apply(this, args);
         lastExecTime = currentTime;
@@ -26,13 +25,7 @@ const ScrollToTop = () => {
   };
 
   const toggleVisibility = useCallback(
-    throttle(() => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    }, 100),
+    throttle(() => setIsVisible(window.pageYOffset > 400), 100),
     []
   );
 
@@ -42,24 +35,25 @@ const ScrollToTop = () => {
   }, [toggleVisibility]);
 
   const scrollToTop = useCallback(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
-    <>
+    <AnimatePresence>
       {isVisible && (
-        <button
+        <motion.button
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.6 }}
+          transition={{ type: "spring", stiffness: 400, damping: 25 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 bg-white/70 backdrop-blur-sm border border-gray-200/50 hover:bg-gray-900 hover:text-white text-gray-900 transition-all duration-300 will-change-transform"
+          className="cursor-grow fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-ink text-paper flex items-center justify-center hover:bg-ink-700 transition-colors"
           aria-label="Scroll to top"
         >
-          <ChevronUp size={20} />
-        </button>
+          <ArrowUp size={18} />
+        </motion.button>
       )}
-    </>
+    </AnimatePresence>
   );
 };
 

@@ -1,0 +1,43 @@
+# robots.txt — Ayamullah Khan, AI Engineer
+# Human + machine readable portfolio. AI agents welcome.
+
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://ayamullah-khan.vercel.app/sitemap.xml
+
+# For AI agents: a concise, structured overview of this site lives at:
+#   https://ayamullah-khan.vercel.app/llms.txt
+# Full content (everything, in plain markdown) at:
+#   https://ayamullah-khan.vercel.app/llms-full.txt

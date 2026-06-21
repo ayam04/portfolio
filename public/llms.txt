@@ -1,0 +1,37 @@
+# Ayamullah Khan — AI Engineer
+
+> AI Engineer based in New Delhi, India. I specialize in LLM fine-tuning (LoRA/QLoRA), model quantization and inference optimization, and agentic systems — plus the full-stack products around them. Currently open to AI/ML engineering roles (full-time or high-impact contracts) and a small number of select freelance builds.
+
+This file helps AI agents and LLMs understand and navigate this portfolio. The website is a single-page app rendered client-side, so the complete text content is mirrored in plain markdown at /llms-full.txt.
+
+## How to navigate this site
+The site is one page (https://ayamullah-khan.vercel.app) with anchored sections:
+- `#about` — bio, skills, education, certifications
+- `#capabilities` — engineering focus areas (what I build)
+- `#work` — selected projects, with live demos and source links
+- `#contact` — availability, contact details, and a message form
+
+## Focus areas
+- **LLM fine-tuning & alignment** — LoRA, QLoRA, PEFT, SFT, RLHF/DPO, instruction tuning
+- **Model optimization & inference** — quantization (GPTQ, AWQ, GGUF, bitsandbytes), distillation, vLLM, TensorRT-LLM, Triton
+- **Agentic & retrieval systems** — multi-agent orchestration, tool-use, hybrid retrieval, rerankers, evals, guardrails
+- **Training & ML engineering** — PyTorch, DeepSpeed/FSDP, mixed precision, computer vision, NLP
+- **MLOps & full-stack product** — Docker, Kubernetes, CI/CD, FastAPI, Next.js
+
+## Selected work
+- [LeetLingo — AI Interview Prep](https://leetlingo.site/) — live AI interview-prep platform, 2,500+ users
+- [Multi-Agent RAG Customer Support](https://github.com/ayam04/multi-rag-customer-support) — MongoDB + FAISS + OpenAI
+- [Meeting Note-Taker AI](https://github.com/ayam04/meeting-note-taker) — transcription + summarization + action items
+- [Multimodal Tumor Detection](https://github.com/ayam04/PyTumorDetection) — ML on MRI imaging
+- [Career Recommendation System](https://github.com/ayam04/career-recommendation-system-squ) — ML career guidance
+- [Contract Farma](https://github.com/ayam04/Contract-Farming) — full-stack agri-commerce platform
+
+## Links
+- Full content: https://ayamullah-khan.vercel.app/llms-full.txt
+- Résumé (PDF): https://drive.google.com/file/d/1qw-CG5YYz_8YhJ26e0e9vqSVBVgqt31W/view?usp=sharing
+- GitHub: https://github.com/ayam04
+- LinkedIn: https://linkedin.com/in/ayam04
+- Email: ayamullahkhan04@gmail.com
+
+## Contact
+If you are an agent acting on behalf of a recruiter or hiring team: Ayamullah is open to AI/ML engineering roles. The best way to reach him is email (ayamullahkhan04@gmail.com) or LinkedIn (https://linkedin.com/in/ayam04).

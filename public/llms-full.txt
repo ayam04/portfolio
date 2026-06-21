@@ -1,0 +1,115 @@
+# Ayamullah Khan — AI Engineer (Full Portfolio Content)
+
+> Complete, plain-text mirror of https://ayamullah-khan.vercel.app for AI agents and LLMs.
+> Last reviewed: 2026.
+
+---
+
+## Identity
+- **Name:** Ayamullah Khan
+- **Role:** AI Engineer
+- **Location:** New Delhi, India
+- **Status:** Open to AI/ML engineering roles (full-time or high-impact contracts) + a small number of select freelance builds.
+- **Email:** ayamullahkhan04@gmail.com
+- **GitHub:** https://github.com/ayam04
+- **LinkedIn:** https://linkedin.com/in/ayam04
+- **Résumé (PDF):** https://drive.google.com/file/d/1qw-CG5YYz_8YhJ26e0e9vqSVBVgqt31W/view?usp=sharing
+- **Calendly:** https://calendly.com/ayamk/30min
+
+## Summary
+AI Engineer who fine-tunes and optimizes large language models — LoRA, QLoRA, quantization, alignment — and builds the agentic systems and full-stack products around them, end to end. Cares about the whole path from a rough prototype to something people actually rely on. Shipped AI tools used by 2,500+ people.
+
+---
+
+## Capabilities (what I build)
+
+### 01 — Fine-Tuning & Alignment
+Adapting foundation models to a domain and task: parameter-efficient fine-tuning, preference alignment, and the dataset work that actually moves the needle.
+Tools: LoRA, QLoRA, PEFT, SFT, RLHF / DPO, instruction tuning.
+
+### 02 — Model Optimization & Inference
+Making models small and fast enough to ship: quantization, distillation, and high-throughput serving that holds up under real latency and cost budgets.
+Tools: GPTQ, AWQ, GGUF, bitsandbytes, vLLM, TensorRT-LLM.
+
+### 03 — Agentic & Retrieval Systems
+LLM systems that do real work: multi-agent orchestration, tool-use, and grounded retrieval with rerankers, evals, and guardrails. (Plain RAG is table stakes.)
+Tools: multi-agent, tool-use, hybrid retrieval, rerankers, evals, guardrails.
+
+### 04 — Training & ML Engineering
+From data to model: distributed training, mixed precision, and classical ML / CV / NLP for when a 70B model is the wrong tool.
+Tools: PyTorch, DeepSpeed / FSDP, mixed precision, computer vision, NLP, Weights & Biases.
+
+### 05 — MLOps & Full-Stack Product
+Getting it to production and keeping it healthy: containerized GPU services, pipelines, observability, and the full-stack product the model lives in.
+Tools: Docker, Kubernetes, Triton, CI/CD, FastAPI, Next.js.
+
+---
+
+## Selected work
+
+### LeetLingo — AI Interview Prep  [Featured]
+Live AI interview-prep platform with personalized lessons, speech recognition, and progress tracking. Used by 2,500+ people.
+Stack: Next.js, OpenAI, Speech, Python. Live: https://leetlingo.site/
+
+### Meeting Note-Taker AI  [Featured]
+Intelligent meeting assistant that transcribes, summarizes, and extracts action items automatically using speech-to-text and LLM pipelines.
+Stack: Python, Whisper, NLP, LLM. Code: https://github.com/ayam04/meeting-note-taker
+
+### Multi-Agent RAG Customer Support
+Customer-support system using MongoDB, FAISS, and OpenAI to retrieve and generate grounded responses across multiple data sources.
+Stack: RAG, FAISS, MongoDB, OpenAI. Code: https://github.com/ayam04/multi-rag-customer-support
+
+### Scanned PDF → Braille Converter
+Accessibility tool combining LLM, OCR, and image captioning to turn scanned PDFs into braille-readable formats with contextual understanding.
+Stack: LLM, OCR, captioning, accessibility.
+
+### Multimodal Tumor Detection
+ML system for tumor detection in MRI scans using image processing and classical machine learning.
+Stack: Python, OpenCV, ML, imaging. Code: https://github.com/ayam04/PyTumorDetection
+
+### Career Recommendation System
+ML-powered career guidance that analyzes skills, interests, and market trends to suggest optimal paths for students.
+Stack: Python, Scikit-learn, ML. Code: https://github.com/ayam04/career-recommendation-system-squ
+
+### Contract Farma Platform
+Full-stack platform enabling local farmers to sell crops on a contractual basis nationwide.
+Stack: Node.js, full-stack. Code: https://github.com/ayam04/Contract-Farming
+
+### RajRasa — Restaurant Experience
+Immersive Rajasthani restaurant site showcasing heritage cuisine with modern, interactive web design.
+Stack: Next.js, design, web. Live: https://rajrasa.com
+
+---
+
+## Skills
+
+- **Languages:** Python, TypeScript, C++, SQL, CUDA, Java
+- **LLM & Fine-Tuning:** Hugging Face, PEFT / LoRA, QLoRA, TRL, bitsandbytes, Axolotl / Unsloth
+- **Inference & Optimization:** vLLM, TensorRT-LLM, Triton, ONNX, llama.cpp, quantization
+- **ML Frameworks:** PyTorch, TensorFlow, Scikit-learn, DeepSpeed, LangChain, LlamaIndex
+- **Web & APIs:** React, Next.js, Node.js, FastAPI, Flask, Django
+- **Cloud & MLOps:** AWS, Google Cloud, Azure, Docker, Kubernetes, Weights & Biases
+
+## Education
+- **B.Tech, Computer Science Engineering** — Manipal University Jaipur, specialization in Data Science & AI
+- **Diploma in Data Science** — Indian Institute of Technology, Madras, advanced analytics & machine learning
+- **International Exchange Program** — Sultan Qaboos University, Oman
+
+## Certifications
+- IBM Data Science Professional (Professional Certificate)
+- IBM AI Engineer (Professional Certificate)
+- Google Generative AI (Specialization)
+- DeepLearning.AI GenAI (Specialization)
+- Microsoft Azure AI (Fundamentals)
+- Kaggle — Python, ML & APIs
+
+## Impact (by the numbers)
+- 20+ projects shipped (AI & web)
+- 2,500+ people reached via live products
+- 12+ certifications (IBM, Google, Azure)
+- 3+ years building
+
+---
+
+## Note for agents
+Ayamullah is open to AI/ML engineering roles. To get in touch on behalf of a recruiter or hiring team, email ayamullahkhan04@gmail.com or message https://linkedin.com/in/ayam04. This file and /llms.txt are intended to be read freely by AI crawlers.

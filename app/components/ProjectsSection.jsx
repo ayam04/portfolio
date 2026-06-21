@@ -1,266 +1,214 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 const projectsData = [
   {
     id: 1,
-    title: "LeetLingo - AI Interview Prep",
-    description: "An interview prep platform using AI for personalized lessons, speech recognition, and progress tracking. Built with modern web technologies.",
+    title: "LeetLingo — AI Interview Prep",
+    description:
+      "An interview-prep platform using AI for personalized lessons, speech recognition, and progress tracking. Live and used by 2,500+ people.",
     image: "/images/projects/leetlingo.png",
     tag: ["All", "GenAI", "Web"],
+    category: "GenAI",
+    stack: ["Next.js", "OpenAI", "Speech", "Python"],
     gitUrl: "",
     previewUrl: "https://leetlingo.site/",
     featured: true,
   },
   {
     id: 8,
-    title: "Meeting Note Taker AI",
-    description: "Intelligent meeting assistant that automatically transcribes, summarizes, and extracts action items from meetings using advanced NLP.",
-    image: "https://cdn.prod.website-files.com/618e9316785b3582a5178502/65ca96699a5d2238f2ed8496_homepage-never-miss-a-detail@2x.jpg",
+    title: "Meeting Note-Taker AI",
+    description:
+      "Intelligent meeting assistant that transcribes, summarizes, and extracts action items automatically using speech-to-text and LLM pipelines.",
+    image:
+      "https://cdn.prod.website-files.com/618e9316785b3582a5178502/65ca96699a5d2238f2ed8496_homepage-never-miss-a-detail@2x.jpg",
     tag: ["All", "GenAI"],
+    category: "GenAI",
+    stack: ["Python", "Whisper", "NLP", "LLM"],
     gitUrl: "https://github.com/ayam04/meeting-note-taker",
     previewUrl: "",
     featured: true,
   },
   {
-    id: 10,
-    title: "RajRasa Restaurant Experience",
-    description: "Immersive Rajasthani restaurant website showcasing heritage cuisine and cultural experience with modern web design and interactive elements.",
-    image: "/images/projects/rajrasa.png",
-    tag: ["All", "Web"],
+    id: 7,
+    title: "Multi-Agent RAG Customer Support",
+    description:
+      "Customer-support system using MongoDB, FAISS, and OpenAI to retrieve and generate grounded responses across multiple data sources.",
+    image: "/images/projects/7.png",
+    tag: ["All", "GenAI"],
+    category: "GenAI",
+    stack: ["RAG", "FAISS", "MongoDB", "OpenAI"],
+    gitUrl: "https://github.com/ayam04/multi-rag-customer-support",
+    previewUrl: "",
+    featured: false,
+  },
+  {
+    id: 2,
+    title: "Scanned PDF → Braille Converter",
+    description:
+      "Accessibility tool combining LLM, OCR, and image captioning to turn scanned PDFs into braille-readable formats with contextual understanding.",
+    image: "/images/projects/2.png",
+    tag: ["All", "GenAI"],
+    category: "GenAI",
+    stack: ["LLM", "OCR", "Captioning", "A11y"],
     gitUrl: "",
-    previewUrl: "https://rajrasa.com",
+    previewUrl: "",
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "Multimodal Tumor Detection",
+    description:
+      "ML system for tumor detection in MRI scans using image processing and classical machine learning with high accuracy.",
+    image: "/images/projects/3.jpeg",
+    tag: ["All", "ML"],
+    category: "ML",
+    stack: ["Python", "OpenCV", "ML", "Imaging"],
+    gitUrl: "https://github.com/ayam04/PyTumorDetection",
+    previewUrl: "",
     featured: false,
   },
   {
     id: 9,
     title: "Career Recommendation System",
-    description: "ML-powered career guidance system that analyzes skills, interests, and market trends to suggest optimal career paths for students.",
-    image: "https://media.gettyimages.com/id/686373828/vector/a-career-crossroads.jpg?s=612x612&w=0&k=20&c=9lR3MeYPvAplgYyMu0gq9Fl3rPJDZASK5zPcFPu0Ucs=",
+    description:
+      "ML-powered career guidance that analyzes skills, interests, and market trends to suggest optimal paths for students.",
+    image:
+      "https://media.gettyimages.com/id/686373828/vector/a-career-crossroads.jpg?s=612x612&w=0&k=20&c=9lR3MeYPvAplgYyMu0gq9Fl3rPJDZASK5zPcFPu0Ucs=",
     tag: ["All", "ML"],
+    category: "ML",
+    stack: ["Python", "Scikit-learn", "ML"],
     gitUrl: "https://github.com/ayam04/career-recommendation-system-squ",
     previewUrl: "",
     featured: false,
   },
   {
-    id: 7,
-    title: "Multi Agent RAG Customer Support",
-    description: "Sophisticated customer support system using MongoDB, FAISS, and OpenAI to retrieve and generate responses from multiple data sources.",
-    image: "/images/projects/7.png",
-    tag: ["All", "GenAI"],
-    gitUrl: "https://github.com/ayam04/multi-rag-customer-support",
-    previewUrl: "",
-  },
-  {
-    id: 2,
-    title: "Scanned PDF to BRF Converter",
-    description: "Accessibility tool combining LLM, OCR, and image captioning to convert scanned PDFs into braille-readable formats with contextual understanding.",
-    image: "/images/projects/2.png",
-    tag: ["All", "GenAI"],
-    gitUrl: "",
-    previewUrl: "",
-  },
-  {
-    id: 3,
-    title: "Multimodal Tumor Detection System",
-    description: "Classical ML system for tumor detection in MRI scans using advanced image processing and machine learning techniques with high accuracy.",
-    image: "/images/projects/3.jpeg",
-    tag: ["All", "ML"],
-    gitUrl: "https://github.com/ayam04/PyTumorDetection",
-    previewUrl: "",
-  },
-  {
     id: 5,
     title: "Contract Farma Platform",
-    description: "Full-stack application enabling local farmers to sell crops on contractual basis nationwide, built with Node.js and modern web technologies.",
+    description:
+      "Full-stack platform enabling local farmers to sell crops on a contractual basis nationwide, built with Node.js.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
+    category: "Web",
+    stack: ["Node.js", "Full-Stack", "Web"],
     gitUrl: "https://github.com/ayam04/Contract-Farming",
     previewUrl: "",
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "RajRasa — Restaurant Experience",
+    description:
+      "Immersive Rajasthani restaurant site showcasing heritage cuisine with modern, interactive web design.",
+    image: "/images/projects/rajrasa.png",
+    tag: ["All", "Web"],
+    category: "Web",
+    stack: ["Next.js", "Design", "Web"],
+    gitUrl: "",
+    previewUrl: "https://rajrasa.com",
+    featured: false,
   },
 ];
 
+const reveal = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: (i % 3) * 0.08 },
+  }),
+};
+
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
-
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
-
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
+  const filtered = projectsData.filter((p) => p.tag.includes(tag));
+  const featured = filtered.filter((p) => p.featured);
+  const rest = filtered.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="relative py-8 bg-transparent overflow-hidden">
-      {/* Editorial decorative elements */}
-      <div className="absolute top-20 right-20 w-12 h-12 opacity-8">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path d="M50 0 L55 35 L90 40 L55 45 L50 80 L45 45 L10 40 L45 35 Z" fill="currentColor" className="text-cyan-400"/>
-        </svg>
-      </div>
-      <div className="absolute bottom-40 left-10 w-8 h-8 opacity-6">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path d="M50 0 L55 35 L90 40 L55 45 L50 80 L45 45 L10 40 L45 35 Z" fill="currentColor" className="text-purple-500"/>
-        </svg>
-      </div>
-      <div className="absolute top-1/3 left-1/4 w-10 h-10 opacity-7">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path d="M50 0 L55 35 L90 40 L55 45 L50 80 L45 45 L10 40 L45 35 Z" fill="currentColor" className="text-orange-400"/>
-        </svg>
-      </div>
-      <div className="absolute bottom-20 right-1/3 w-14 h-14 opacity-5">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path d="M50 0 L55 35 L90 40 L55 45 L50 80 L45 45 L10 40 L45 35 Z" fill="currentColor" className="text-emerald-300"/>
-        </svg>
-      </div>
-      <div className="absolute top-40 right-1/5 w-6 h-6 opacity-8">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path d="M50 0 L55 35 L90 40 L55 45 L50 80 L45 45 L10 40 L45 35 Z" fill="currentColor" className="text-red-400"/>
-        </svg>
-      </div>
-      
-      <div className="relative z-10">
-        {/* Editorial Header */}
-        <div className="mb-20 px-4 xl:px-16">
-          <div className="grid md:grid-cols-12 gap-16 items-end">
-            <div className="md:col-span-8">
-              <span className="text-sm uppercase tracking-[0.2em] text-gray-500 font-light mb-8 block">
-                03 — Portfolio
-              </span>
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-gray-900 mb-4 leading-[0.8] tracking-tight">
-                Featured
-              </h2>
-              <h3 className="text-6xl md:text-7xl lg:text-8xl font-serif italic text-gray-400 leading-[0.8] tracking-tight">
-                Projects
-              </h3>
-            </div>
-            <div className="md:col-span-4">
-              <p className="text-lg text-gray-600 leading-relaxed font-light">
-                A collection of AI-powered applications, machine learning models, and modern web solutions 
-                that showcase my expertise in cutting-edge technology.
-              </p>
-            </div>
-          </div>
+    <section id="work" className="px-5 md:px-10 py-24 md:py-36">
+      {/* Header */}
+      <div className="grid md:grid-cols-12 gap-8 items-end mb-12 md:mb-16">
+        <div className="md:col-span-8">
+          <span className="eyebrow text-ink/45 block mb-6">03 — Selected Work</span>
+          <h2 className="display-section">
+            Things I&apos;ve<span className="font-serif-italic normal-case tracking-normal text-signal"> shipped</span>
+          </h2>
         </div>
+        <p className="md:col-span-4 text-base md:text-lg font-light text-ink/70 leading-relaxed md:pb-3">
+          AI products, ML systems, and full-stack builds — real code, real users.
+        </p>
+      </div>
 
-        {/* Editorial Filter Tags */}
-        <div className="flex flex-wrap justify-start items-center gap-6 py-8 mb-16 px-4 xl:px-16">
-          <ProjectTag
-            onClick={handleTagChange}
-            name="All"
-            isSelected={tag === "All"}
-          />
-          <ProjectTag
-            onClick={handleTagChange}
-            name="GenAI"
-            isSelected={tag === "GenAI"}
-          />
-          <ProjectTag
-            onClick={handleTagChange}
-            name="ML"
-            isSelected={tag === "ML"}
-          />
-          <ProjectTag
-            onClick={handleTagChange}
-            name="Web"
-            isSelected={tag === "Web"}
-          />
+      {/* Filters */}
+      <div className="flex flex-wrap gap-3 mb-12">
+        {["All", "GenAI", "ML", "Web"].map((t) => (
+          <ProjectTag key={t} name={t} onClick={setTag} isSelected={tag === t} />
+        ))}
+      </div>
+
+      {/* Featured */}
+      {featured.length > 0 && (
+        <div className="grid lg:grid-cols-2 gap-5 md:gap-6 mb-6">
+          {featured.map((p, i) => (
+            <motion.div
+              key={p.id}
+              variants={reveal}
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+            >
+              <ProjectCard {...p} imgUrl={p.image} index={i} featured />
+            </motion.div>
+          ))}
         </div>
+      )}
 
-        {/* Editorial Projects Grid */}
-        <div className="px-4 xl:px-16">
-          <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-20">
-            {filteredProjects.filter(project => project.featured).map((project, index) => (
-              <motion.div
-                key={project.id}
-                variants={cardVariants}
-                initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className={`${index === 0 ? 'md:col-span-2 lg:col-span-2' : ''} h-full`}
-              >
-                <ProjectCard
-                  key={project.id}
-                  title={project.title}
-                  description={project.description}
-                  imgUrl={project.image}
-                  gitUrl={project.gitUrl}
-                  previewUrl={project.previewUrl}
-                  featured={true}
-                />
-              </motion.div>
-            ))}
-          </div>
+      {/* Rest */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        {rest.map((p, i) => (
+          <motion.div
+            key={p.id}
+            variants={reveal}
+            custom={i}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+          >
+            <ProjectCard {...p} imgUrl={p.image} index={i + featured.length} />
+          </motion.div>
+        ))}
+      </div>
 
-          {/* Other Projects - Editorial grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {filteredProjects.filter(project => !project.featured).map((project, index) => (
-              <motion.div
-                key={project.id}
-                variants={cardVariants}
-                initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="h-full"
-              >
-                <ProjectCard
-                  key={project.id}
-                  title={project.title}
-                  description={project.description}
-                  imgUrl={project.image}
-                  gitUrl={project.gitUrl}
-                  previewUrl={project.previewUrl}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Editorial CTA Section */}
-        <div className="mt-32 px-4 xl:px-16">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h3 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 leading-tight">
-                Interested in 
-                <span className="font-serif italic text-gray-400"> Working Together?</span>
-              </h3>
-              <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
-                I'm always excited to take on new challenges and collaborate on innovative projects. 
-                Whether it's AI development, machine learning, or full-stack applications, let's create something exceptional.
-              </p>
-              <Link
-                href="/#contact"
-                className="inline-block border border-gray-900 hover:bg-gray-900 text-gray-900 hover:text-white font-light px-8 py-4 transition-all duration-300"
-              >
-                <span className="text-sm uppercase tracking-wider">Start Project</span>
-              </Link>
-            </div>
-            <div className="text-right">
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-4">
-                Ready to collaborate
-              </div>
-              <Link
-                href="https://calendly.com/ayamk/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wider text-gray-500 hover:text-gray-900 transition-colors border-b border-transparent hover:border-gray-900"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-          </div>
+      {/* CTA */}
+      <div className="mt-16 md:mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-t border-[var(--line)] pt-10">
+        <p className="font-display text-2xl md:text-3xl tracking-tight max-w-xl">
+          Got a hard problem worth solving?
+        </p>
+        <div className="flex gap-4">
+          <Link
+            href="https://github.com/ayam04"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-grow group inline-flex items-center gap-2 rounded-full border border-ink/25 px-6 py-3.5 text-sm uppercase tracking-[0.14em] hover:border-ink transition-colors"
+          >
+            All repos
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
+          <Link
+            href="#contact"
+            className="cursor-grow group inline-flex items-center gap-2 rounded-full bg-signal text-paper-pure px-6 py-3.5 text-sm uppercase tracking-[0.14em] hover:bg-signal-deep transition-colors"
+          >
+            Let&apos;s talk
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

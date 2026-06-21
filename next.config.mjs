@@ -4,7 +4,11 @@ const nextConfig = {
         ignoreDuringBuilds: true,
     },
     images: {
-        domains: ['cdn.prod.website-files.com', 'images.unsplash.com', "media.gettyimages.com"],
+        remotePatterns: [
+            { protocol: 'https', hostname: 'cdn.prod.website-files.com' },
+            { protocol: 'https', hostname: 'images.unsplash.com' },
+            { protocol: 'https', hostname: 'media.gettyimages.com' },
+        ],
         formats: ['image/webp', 'image/avif'],
         minimumCacheTTL: 60,
         dangerouslyAllowSVG: true,
