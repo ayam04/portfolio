@@ -45,6 +45,13 @@ Tools: Docker, Kubernetes, Triton, CI/CD, FastAPI, Next.js.
 
 ---
 
+## Experience
+- **AI SDE — myAIcademy** (Feb 2026 – Present, Hybrid · Dubai). Lead development of a B2C app for learning every AI tool on the market; built a course-automation system that ships persona-tailored courses within a 72-hour SLA of a new tool dropping; built the customer-outreach system (customer.io), retaining ~8% more users.
+- **AI Engineer — Peach** (May 2025 – Jan 2026, Delhi). Live agentic workflows for personalized learning paths (reduced user intervention ~60%); Multi-Context Prompt Stacks for multi-turn LLM reasoning; scalable LLM content-generation/evaluation backend (cut latency ~40%).
+- **GenAI Engineer — HYRGPT** (May 2024 – May 2025, Remote). On-call recruitment voice assistant (+~90% shortlisting efficiency); resume retrieval & ranking via vector embeddings + metadata filtering; speech-to-text + summarization with diarization (~70% faster turnaround); RAG pipeline cut LLM inference cost ~60%.
+- **AI Research — Sultan Qaboos University** (Jun – Aug 2024, Muscat, Oman). Career-recommendation system (psychometric + LLM reasoning); cross-cultural evaluation (+~85% reliability over baselines); multimodal text + image inputs.
+- **Researcher — CSIR-IHBT** (May – Jun 2024, India). React clinical-analytics dashboard for Alzheimer's screening; ~60% performance/UX improvement; IoT-assisted health monitoring with Raspberry Pi.
+
 ## Selected work
 
 ### LeetLingo — AI Interview Prep  [Featured]

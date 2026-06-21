@@ -51,7 +51,7 @@ const EmailSection = () => {
     <section id="contact" className="px-5 md:px-10 py-24 md:py-36">
       {/* Header */}
       <div className="mb-16 md:mb-24">
-        <span className="eyebrow text-ink/45 block mb-8">04 — Contact</span>
+        <span className="eyebrow text-ink/45 block mb-8">05 — Contact</span>
         <h2 className="display-hero">
           Let&apos;s<span className="font-serif-italic normal-case tracking-normal text-signal"> talk.</span>
         </h2>

@@ -8,6 +8,7 @@ This file helps AI agents and LLMs understand and navigate this portfolio. The w
 The site is one page (https://ayamullah-khan.vercel.app) with anchored sections:
 - `#about` — bio, skills, education, certifications
 - `#capabilities` — engineering focus areas (what I build)
+- `#experience` — work history (myAIcademy, Peach, HYRGPT, SQU, CSIR-IHBT)
 - `#work` — selected projects, with live demos and source links
 - `#contact` — availability, contact details, and a message form
 

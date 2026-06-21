@@ -7,6 +7,7 @@ import LoadingBar from "./components/LoadingBar";
 const AchievementsSection = lazy(() => import("./components/AchievementsSection"));
 const AboutSection = lazy(() => import("./components/AboutSection"));
 const CapabilitiesSection = lazy(() => import("./components/CapabilitiesSection"));
+const ExperienceSection = lazy(() => import("./components/ExperienceSection"));
 const ProjectsSection = lazy(() => import("./components/ProjectsSection"));
 const EmailSection = lazy(() => import("./components/EmailSection"));
 const Footer = lazy(() => import("./components/Footer"));
@@ -35,6 +36,10 @@ export default function Home() {
 
       <Suspense fallback={null}>
         <CapabilitiesSection />
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <ExperienceSection />
       </Suspense>
 
       <Suspense fallback={null}>

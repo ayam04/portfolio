@@ -136,7 +136,7 @@ const ProjectsSection = () => {
       {/* Header */}
       <div className="grid md:grid-cols-12 gap-8 items-end mb-12 md:mb-16">
         <div className="md:col-span-8">
-          <span className="eyebrow text-ink/45 block mb-6">03 — Selected Work</span>
+          <span className="eyebrow text-ink/45 block mb-6">04 — Selected Work</span>
           <h2 className="display-section">
             Things I&apos;ve<span className="font-serif-italic normal-case tracking-normal text-signal"> shipped</span>
           </h2>

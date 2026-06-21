@@ -6,8 +6,9 @@ import MenuOverlay from "./MenuOverlay";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { title: "Work", path: "#work" },
   { title: "About", path: "#about" },
+  { title: "Experience", path: "#experience" },
+  { title: "Work", path: "#work" },
   { title: "Contact", path: "#contact" },
 ];
 
