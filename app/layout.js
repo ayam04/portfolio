@@ -38,14 +38,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ayamullah-khan.vercel.app'),
+  metadataBase: new URL('https://ayam.codes'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ayamullah-khan.vercel.app',
+    url: 'https://ayam.codes',
     title: 'Ayamullah Khan — AI Engineer',
     description: 'AI Engineer specializing in LLM fine-tuning, quantization, and agentic systems. Shipped AI tools used by thousands. Open to AI/ML engineering roles.',
     siteName: 'Ayamullah Khan',
@@ -72,11 +72,11 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Ayamullah Khan",
-  url: "https://ayamullah-khan.vercel.app",
+  url: "https://ayam.codes",
   jobTitle: "AI Engineer",
   description:
     "AI Engineer specializing in LLM fine-tuning (LoRA/QLoRA), model quantization and inference optimization, and agentic systems, plus the full-stack products around them.",
-  image: "https://ayamullah-khan.vercel.app/images/IMG_7779.png",
+  image: "https://ayam.codes/images/IMG_7779.png",
   email: "mailto:ayamullahkhan04@gmail.com",
   address: {
     "@type": "PostalAddress",

@@ -35,9 +35,9 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://ayamullah-khan.vercel.app/sitemap.xml
+Sitemap: https://ayam.codes/sitemap.xml
 
 # For AI agents: a concise, structured overview of this site lives at:
-#   https://ayamullah-khan.vercel.app/llms.txt
+#   https://ayam.codes/llms.txt
 # Full content (everything, in plain markdown) at:
-#   https://ayamullah-khan.vercel.app/llms-full.txt
+#   https://ayam.codes/llms-full.txt

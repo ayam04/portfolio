@@ -1,6 +1,6 @@
 # Ayamullah Khan — AI Engineer (Full Portfolio Content)
 
-> Complete, plain-text mirror of https://ayamullah-khan.vercel.app for AI agents and LLMs.
+> Complete, plain-text mirror of https://ayam.codes for AI agents and LLMs.
 > Last reviewed: 2026.
 
 ---

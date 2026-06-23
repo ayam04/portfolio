@@ -19,11 +19,7 @@ const ShowreelSection = () => {
   }, [inView]);
 
   return (
-    <section id="showreel" ref={ref} className="px-5 md:px-10 py-16 md:py-24">
-      <div className="flex items-end justify-between mb-5">
-        <span className="eyebrow text-ink/45">Showreel</span>
-        <span className="eyebrow text-ink/45">13s · sound off</span>
-      </div>
+    <section id="showreel" ref={ref} className="px-5 md:px-10 pt-2 pb-10 md:pt-3 md:pb-14">
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}

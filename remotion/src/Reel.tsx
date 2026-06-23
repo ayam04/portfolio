@@ -290,7 +290,7 @@ const CTA: React.FC = () => (
           borderRadius: 999,
         }}
       >
-        ayamullah-khan.vercel.app
+        ayam.codes
       </div>
     </FadeIn>
   </AbsoluteFill>

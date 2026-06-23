@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const base = "https://ayamullah-khan.vercel.app";
+  const base = "https://ayam.codes";
   return [
     {
       url: base,
