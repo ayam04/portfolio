@@ -23,17 +23,8 @@ const Footer = () => {
             <ul className="space-y-3 text-paper/70">
               <li><Link href="#about" className="link-underline hover:text-paper">About</Link></li>
               <li><Link href="#work" className="link-underline hover:text-paper">Work</Link></li>
+              <li><Link href="#experience" className="link-underline hover:text-paper">Experience</Link></li>
               <li><Link href="#contact" className="link-underline hover:text-paper">Contact</Link></li>
-              <li>
-                <Link
-                  href="https://drive.google.com/file/d/1qw-CG5YYz_8YhJ26e0e9vqSVBVgqt31W/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline hover:text-paper"
-                >
-                  Résumé
-                </Link>
-              </li>
             </ul>
           </div>
 

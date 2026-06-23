@@ -29,7 +29,6 @@ The site is one page (https://ayam.codes) with anchored sections:
 
 ## Links
 - Full content: https://ayam.codes/llms-full.txt
-- Résumé (PDF): https://drive.google.com/file/d/1qw-CG5YYz_8YhJ26e0e9vqSVBVgqt31W/view?usp=sharing
 - GitHub: https://github.com/ayam04
 - LinkedIn: https://linkedin.com/in/ayam04
 - Email: ayamullahkhan04@gmail.com

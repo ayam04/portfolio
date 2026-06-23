@@ -94,7 +94,7 @@ const Intro: React.FC = () => (
     </div>
 
     <FadeIn delay={6}>
-      <div style={{ ...eyebrow, marginBottom: 26 }}>Portfolio — AI Engineer</div>
+      <div style={{ ...eyebrow, marginBottom: 26 }}>Portfolio · AI Engineer</div>
     </FadeIn>
     <Rise delay={10} dur={24}>
       <div
@@ -179,7 +179,7 @@ const METRICS = [
 const Metrics: React.FC = () => (
   <AbsoluteFill style={{ justifyContent: "center", padding: "0 120px" }}>
     <FadeIn>
-      <div style={{ ...eyebrow, marginBottom: 50 }}>Shipped — measurable impact</div>
+      <div style={{ ...eyebrow, marginBottom: 50 }}>Shipped · measurable impact</div>
     </FadeIn>
     <div
       style={{
@@ -225,7 +225,7 @@ const Metrics: React.FC = () => (
 
 // ---- Scene 4: Selected work ----
 const WORK = [
-  "LeetLingo — 2,500+ users",
+  "LeetLingo · 2,500+ users",
   "Multi-Agent RAG support",
   "Recruitment Voice AI",
 ];

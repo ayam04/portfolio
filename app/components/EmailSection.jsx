@@ -3,9 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-const RESUME_URL =
-  "https://drive.google.com/file/d/1qw-CG5YYz_8YhJ26e0e9vqSVBVgqt31W/view?usp=sharing";
-
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -74,10 +71,6 @@ const EmailSection = () => {
               <span><span className="eyebrow text-ink/45 block mb-1">Email</span><span className="font-light">ayamullahkhan04@gmail.com</span></span>
               <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
-            <Link href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
-              <span><span className="eyebrow text-ink/45 block mb-1">Résumé</span><span className="font-light">Download PDF</span></span>
-              <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-            </Link>
             <Link href="https://linkedin.com/in/ayam04" target="_blank" rel="noopener noreferrer" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
               <span><span className="eyebrow text-ink/45 block mb-1">LinkedIn</span><span className="font-light">/in/ayam04</span></span>
               <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
