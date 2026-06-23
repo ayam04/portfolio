@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import LoadingBar from "./components/LoadingBar";
 
+const ShowreelSection = lazy(() => import("./components/ShowreelSection"));
 const AchievementsSection = lazy(() => import("./components/AchievementsSection"));
 const AboutSection = lazy(() => import("./components/AboutSection"));
 const CapabilitiesSection = lazy(() => import("./components/CapabilitiesSection"));
@@ -25,6 +26,10 @@ export default function Home() {
     <main className="grain relative bg-paper text-ink overflow-hidden">
       <Navbar />
       <HeroSection />
+
+      <Suspense fallback={null}>
+        <ShowreelSection />
+      </Suspense>
 
       <Suspense fallback={null}>
         <AchievementsSection />
