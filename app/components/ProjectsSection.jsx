@@ -9,19 +9,58 @@ import { ArrowUpRight } from "lucide-react";
 const projectsData = [
   {
     id: 1,
-    title: "LeetLingo — AI Interview Prep",
+    title: "fya: Security Scanner",
     description:
-      "An interview-prep platform using AI for personalized lessons, speech recognition, and progress tracking. Live and used by 2,500+ people.",
-    image: "/images/projects/leetlingo.png",
-    tag: ["All", "GenAI", "Web"],
-    category: "GenAI",
-    stack: ["Next.js", "OpenAI", "Speech", "Python"],
-    gitUrl: "",
-    previewUrl: "https://leetlingo.site/",
+      "Open-source dynamic scanner that runs 58 OWASP-mapped checks across web apps, APKs, and source code, orchestrating nuclei, nikto, sqlmap, and nmap behind one command. 42 stars and published on PyPI.",
+    image: "/images/projects/fya.png",
+    tag: ["All", "Security"],
+    category: "Security",
+    stack: ["Python", "DAST", "OWASP", "PyPI"],
+    gitUrl: "https://github.com/ayam04/fya",
+    previewUrl: "https://fya.ayamk.in",
     featured: true,
   },
   {
-    id: 8,
+    id: 2,
+    title: "Deal Dossier Generator",
+    description:
+      "Drop a company domain and get a meeting-ready deal dossier. Streams structured output from Gemini with Google Search grounding into an interactive signals timeline.",
+    image: "/images/projects/dossier.svg",
+    tag: ["All", "GenAI"],
+    category: "GenAI",
+    stack: ["Next.js", "Gemini", "Grounding", "Streaming"],
+    gitUrl: "https://github.com/ayam04/dossier",
+    previewUrl: "https://dossier.ayamk.in",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "LeetLingo: AI Interview Prep",
+    description:
+      "An interview-prep platform using AI for personalized lessons, speech recognition, and progress tracking. Live and used by 2,500+ people.",
+    image: "/images/projects/leetlingo.png",
+    tag: ["All", "GenAI"],
+    category: "GenAI",
+    stack: ["Next.js", "OpenAI", "Speech", "Python"],
+    gitUrl: "https://github.com/ayam04/leetlingo-frontend",
+    previewUrl: "",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "AI Voice Screening Agent",
+    description:
+      "Deployed voice agent that screens candidates over the phone, wiring Plivo telephony to Deepgram speech and MongoDB. Ran in production at HyrGPT.",
+    image: "/images/projects/ai-call.svg",
+    tag: ["All", "GenAI"],
+    category: "GenAI",
+    stack: ["Plivo", "Deepgram", "MongoDB", "Voice AI"],
+    gitUrl: "https://github.com/ayam04/ai-call",
+    previewUrl: "",
+    featured: false,
+  },
+  {
+    id: 5,
     title: "Meeting Note-Taker AI",
     description:
       "Intelligent meeting assistant that transcribes, summarizes, and extracts action items automatically using speech-to-text and LLM pipelines.",
@@ -32,10 +71,10 @@ const projectsData = [
     stack: ["Python", "Whisper", "NLP", "LLM"],
     gitUrl: "https://github.com/ayam04/meeting-note-taker",
     previewUrl: "",
-    featured: true,
+    featured: false,
   },
   {
-    id: 7,
+    id: 6,
     title: "Multi-Agent RAG Customer Support",
     description:
       "Customer-support system using MongoDB, FAISS, and OpenAI to retrieve and generate grounded responses across multiple data sources.",
@@ -48,69 +87,29 @@ const projectsData = [
     featured: false,
   },
   {
-    id: 2,
-    title: "Scanned PDF → Braille Converter",
+    id: 7,
+    title: "Indian Accent Matcher",
     description:
-      "Accessibility tool combining LLM, OCR, and image captioning to turn scanned PDFs into braille-readable formats with contextual understanding.",
-    image: "/images/projects/2.png",
-    tag: ["All", "GenAI"],
-    category: "GenAI",
-    stack: ["LLM", "OCR", "Captioning", "A11y"],
-    gitUrl: "",
-    previewUrl: "",
-    featured: false,
-  },
-  {
-    id: 3,
-    title: "Multimodal Tumor Detection",
-    description:
-      "ML system for tumor detection in MRI scans using image processing and classical machine learning with high accuracy.",
-    image: "/images/projects/3.jpeg",
+      "Audio matching algorithm that scores similarity between Indian-accent voice samples using audio embeddings and vector search.",
+    image: "/images/projects/audio-accent.svg",
     tag: ["All", "ML"],
     category: "ML",
-    stack: ["Python", "OpenCV", "ML", "Imaging"],
-    gitUrl: "https://github.com/ayam04/PyTumorDetection",
+    stack: ["Python", "Audio", "Embeddings", "ML"],
+    gitUrl: "https://github.com/ayam04/audio-accent-vector-match",
     previewUrl: "",
     featured: false,
   },
   {
-    id: 9,
-    title: "Career Recommendation System",
+    id: 8,
+    title: "PDF Vector Search",
     description:
-      "ML-powered career guidance that analyzes skills, interests, and market trends to suggest optimal paths for students.",
-    image:
-      "https://media.gettyimages.com/id/686373828/vector/a-career-crossroads.jpg?s=612x612&w=0&k=20&c=9lR3MeYPvAplgYyMu0gq9Fl3rPJDZASK5zPcFPu0Ucs=",
+      "Semantic search over PDF documents backed by a MongoDB vector index, returning grounded passages for downstream RAG.",
+    image: "/images/projects/mongo-vector.svg",
     tag: ["All", "ML"],
     category: "ML",
-    stack: ["Python", "Scikit-learn", "ML"],
-    gitUrl: "https://github.com/ayam04/career-recommendation-system-squ",
+    stack: ["MongoDB", "Vectors", "RAG", "Python"],
+    gitUrl: "https://github.com/ayam04/mongoDB-pdf-vector-search",
     previewUrl: "",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Contract Farma Platform",
-    description:
-      "Full-stack platform enabling local farmers to sell crops on a contractual basis nationwide, built with Node.js.",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    category: "Web",
-    stack: ["Node.js", "Full-Stack", "Web"],
-    gitUrl: "https://github.com/ayam04/Contract-Farming",
-    previewUrl: "",
-    featured: false,
-  },
-  {
-    id: 10,
-    title: "RajRasa — Restaurant Experience",
-    description:
-      "Immersive Rajasthani restaurant site showcasing heritage cuisine with modern, interactive web design.",
-    image: "/images/projects/rajrasa.png",
-    tag: ["All", "Web"],
-    category: "Web",
-    stack: ["Next.js", "Design", "Web"],
-    gitUrl: "",
-    previewUrl: "https://rajrasa.com",
     featured: false,
   },
 ];
@@ -142,13 +141,13 @@ const ProjectsSection = () => {
           </h2>
         </div>
         <p className="md:col-span-4 text-base md:text-lg font-light text-ink/70 leading-relaxed md:pb-3">
-          AI products, ML systems, and full-stack builds — real code, real users.
+          AI products, agentic systems, and security tooling. Real code, real users.
         </p>
       </div>
 
       {/* Filters */}
       <div className="flex flex-wrap gap-3 mb-12">
-        {["All", "GenAI", "ML", "Web"].map((t) => (
+        {["All", "GenAI", "ML", "Security"].map((t) => (
           <ProjectTag key={t} name={t} onClick={setTag} isSelected={tag === t} />
         ))}
       </div>
