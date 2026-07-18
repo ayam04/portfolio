@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -66,6 +66,17 @@ const EmailSection = () => {
             </p>
           </div>
 
+          <Link
+            href="https://cal.com/ayam04"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-grow group inline-flex items-center gap-2.5 rounded-full border border-ink/25 px-6 py-3.5 text-sm uppercase tracking-[0.14em] hover:border-ink transition-colors"
+          >
+            <Calendar className="w-4 h-4" />
+            Book a call
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
+
           <div className="space-y-px bg-[var(--line)] border border-[var(--line)]">
             <a href="mailto:ayamullahkhan04@gmail.com" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
               <span><span className="eyebrow text-ink/45 block mb-1">Email</span><span className="font-light">ayamullahkhan04@gmail.com</span></span>
@@ -82,10 +93,7 @@ const EmailSection = () => {
           </div>
 
           <p className="text-sm text-ink/45">
-            Based in New Delhi, IN · Prefer a quick call?{" "}
-            <Link href="https://calendly.com/ayamk/30min" target="_blank" rel="noopener noreferrer" className="link-underline text-ink/70">
-              Book 30 min
-            </Link>
+            Based in New Delhi, IN · IST (UTC+5:30)
           </p>
         </div>
 
