@@ -1,71 +1,19 @@
-"use client";
-import { Suspense, lazy, useState } from "react";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import LoadingBar from "./components/LoadingBar";
-
-const ShowreelSection = lazy(() => import("./components/ShowreelSection"));
-const AchievementsSection = lazy(() => import("./components/AchievementsSection"));
-const AboutSection = lazy(() => import("./components/AboutSection"));
-const CapabilitiesSection = lazy(() => import("./components/CapabilitiesSection"));
-const ExperienceSection = lazy(() => import("./components/ExperienceSection"));
-const ProjectsSection = lazy(() => import("./components/ProjectsSection"));
-const EmailSection = lazy(() => import("./components/EmailSection"));
-const Footer = lazy(() => import("./components/Footer"));
-const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
-const CustomCursor = lazy(() => import("./components/CustomCursor"));
+import HeroSection from "./components/redesign/HeroSection";
+import MarqueeSection from "./components/redesign/MarqueeSection";
+import AboutSection from "./components/redesign/AboutSection";
+import ServicesSection from "./components/redesign/ServicesSection";
+import ProjectsSection from "./components/redesign/ProjectsSection";
+import ContactSection from "./components/redesign/ContactSection";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  if (isLoading) {
-    return <LoadingBar onComplete={() => setIsLoading(false)} />;
-  }
-
   return (
-    <main className="grain relative bg-paper text-ink overflow-hidden">
-      <Navbar />
+    <main className="bg-[#0C0C0C]" style={{ overflowX: "clip" }}>
       <HeroSection />
-
-      <Suspense fallback={null}>
-        <ShowreelSection />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <AchievementsSection />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <AboutSection />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <CapabilitiesSection />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <ExperienceSection />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <ProjectsSection />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <EmailSection />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <Footer />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <ScrollToTop />
-      </Suspense>
-
-      <Suspense fallback={null}>
-        <CustomCursor />
-      </Suspense>
+      <MarqueeSection />
+      <AboutSection />
+      <ServicesSection />
+      <ProjectsSection />
+      <ContactSection />
     </main>
   );
 }

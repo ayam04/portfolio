@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#646973"/><stop offset="1" stop-color="#BBCCD7"/></linearGradient></defs><rect width="1280" height="800" fill="#0C0C0C"/>
+<text x="640" y="420" text-anchor="middle" font-family="Kanit,Arial,sans-serif" font-size="170" font-weight="900" fill="url(#g)" letter-spacing="-4">LEETLINGO</text>
+<text x="640" y="520" text-anchor="middle" font-family="Kanit,Arial,sans-serif" font-size="30" font-weight="300" fill="#D7E2EA" fill-opacity="0.6" letter-spacing="10">AI INTERVIEW PREP</text>
+</svg>

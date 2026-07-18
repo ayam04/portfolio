@@ -1,27 +1,20 @@
 import './globals.css'
-import { Inter, Space_Grotesk, Instrument_Serif } from 'next/font/google'
+import { Kanit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next';
 
-const inter = Inter({
+const kanit = Kanit({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '900'],
+  variable: '--font-kanit',
 })
 
-const display = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-display',
-})
-
-const serif = Instrument_Serif({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '400',
-  style: ['normal', 'italic'],
-  variable: '--font-serif',
-})
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#0C0C0C',
+}
 
 export const metadata = {
   title: {
@@ -116,22 +109,15 @@ const personSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable} ${serif.variable}`}>
+    <html lang="en" className={kanit.variable}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://cdn.prod.website-files.com" />
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        <link rel="dns-prefetch" href="https://media.gettyimages.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#0a0a0a" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={inter.className}>
+      <body className={kanit.className}>
         {children}
         <Analytics />
       </body>

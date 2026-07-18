@@ -2,219 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --ink: #111014;
-  --ink-700: #26262d;
-  --paper: #f3eee3;
-  --paper-dim: #e8e1d3;
-  --paper-pure: #ffffff;
-  --signal: #2540ff;
-  --signal-deep: #1c33d6;
-
-  --line: rgba(17, 16, 20, 0.14);
-  --line-strong: rgba(17, 16, 20, 0.28);
-
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
-}
-
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
-  background: var(--ink);
+}
+
+html,
+body {
+  background: #0C0C0C;
 }
 
 body {
-  color: var(--ink);
-  background: var(--paper);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  line-height: 1.55;
-  overflow-x: hidden;
-  letter-spacing: -0.011em;
+  font-family: var(--font-kanit), sans-serif;
+  color: #D7E2EA;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
-/* ---- Typography ---- */
-.font-display {
-  font-family: var(--font-display), var(--font-inter), sans-serif;
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.font-serif-italic {
-  font-family: var(--font-serif), Georgia, serif;
-  font-style: italic;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display), var(--font-inter), sans-serif;
-  letter-spacing: -0.03em;
-  line-height: 0.92;
-}
-
-/* Giant kinetic display type */
-.display-hero {
-  font-family: var(--font-display), sans-serif;
-  font-weight: 700;
-  line-height: 0.82;
-  letter-spacing: -0.055em;
-  font-size: clamp(3.2rem, 13.5vw, 13rem);
-  text-transform: uppercase;
-}
-
-.display-section {
-  font-family: var(--font-display), sans-serif;
-  font-weight: 700;
-  line-height: 0.86;
-  letter-spacing: -0.05em;
-  font-size: clamp(2.6rem, 9vw, 8rem);
-  text-transform: uppercase;
-}
-
-/* Outlined "stroke" text for brutalist depth */
-.text-stroke {
-  -webkit-text-stroke: 1.4px var(--ink);
-  color: transparent;
-}
-.text-stroke-paper {
-  -webkit-text-stroke: 1.2px var(--paper);
-  color: transparent;
-}
-
-/* Section index labels */
-.eyebrow {
-  font-family: var(--font-inter), sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.28em;
-  font-size: 0.7rem;
-  font-weight: 500;
-}
-
-/* ---- Surfaces ---- */
-.section-dark {
-  background: var(--ink);
-  color: var(--paper);
-}
-.section-dark ::selection {
-  background: var(--paper);
-  color: var(--ink);
-}
-
-/* Film-grain texture overlay */
-.grain::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  pointer-events: none;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* ---- Marquee ---- */
-.marquee-track {
-  display: flex;
-  width: max-content;
-  will-change: transform;
-}
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-
-/* ---- Links / hover underline ---- */
-.link-underline {
-  position: relative;
-  display: inline-block;
-}
-.link-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  height: 1px;
-  width: 100%;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.45s var(--ease-out-expo);
-}
-.link-underline:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-/* ---- Custom cursor ---- */
-@media (hover: hover) and (pointer: fine) {
-  body { cursor: none; }
-  a, button, [role="button"], input, textarea, select { cursor: none; }
-}
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-  will-change: transform, width, height;
-}
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  background: #fff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-  will-change: transform;
-}
-@media (hover: none) and (pointer: coarse) {
-  .cursor-ring, .cursor-dot { display: none; }
-}
-
-/* ---- Scrollbar ---- */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--paper-dim); }
-::-webkit-scrollbar-thumb { background: var(--ink); }
-::-webkit-scrollbar-thumb:hover { background: var(--ink-700); }
 
 ::selection {
-  background: var(--signal);
-  color: #fff;
+  background: #D7E2EA;
+  color: #0C0C0C;
 }
 
-:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 3px;
-}
-
-/* GPU helpers */
-.gpu {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-/* ---- Reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
-  .marquee-track { animation: none !important; }
 }
