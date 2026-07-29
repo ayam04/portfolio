@@ -45,11 +45,11 @@ Tools: Docker, Kubernetes, Triton, CI/CD, FastAPI, Next.js.
 ---
 
 ## Experience
-- **AI SDE — myAIcademy** (Feb 2026 – Present, Hybrid · Dubai). Lead development of a B2C app for learning every AI tool on the market; built a course-automation system that ships persona-tailored courses within a 72-hour SLA of a new tool dropping; built the customer-outreach system (customer.io), retaining ~8% more users.
-- **AI Engineer — Peach** (May 2025 – Jan 2026, Delhi). Live agentic workflows for personalized learning paths (reduced user intervention ~60%); Multi-Context Prompt Stacks for multi-turn LLM reasoning; scalable LLM content-generation/evaluation backend (cut latency ~40%).
-- **GenAI Engineer — HYRGPT** (May 2024 – May 2025, Remote). On-call recruitment voice assistant (+~90% shortlisting efficiency); resume retrieval & ranking via vector embeddings + metadata filtering; speech-to-text + summarization with diarization (~70% faster turnaround); RAG pipeline cut LLM inference cost ~60%.
-- **AI Research — Sultan Qaboos University** (Jun – Aug 2024, Muscat, Oman). Career-recommendation system (psychometric + LLM reasoning); cross-cultural evaluation (+~85% reliability over baselines); multimodal text + image inputs.
-- **Researcher — CSIR-IHBT** (May – Jun 2024, India). React clinical-analytics dashboard for Alzheimer's screening; ~60% performance/UX improvement; IoT-assisted health monitoring with Raspberry Pi.
+- **AI SDE — myAIcademy** (Feb 2026 – Present, Hybrid · Dubai). Led a Flutter and web AI-learning platform to 10,000+ students onboarded and 50,000+ learning sessions; built a course-automation system that ships persona-tailored courses within a 72-hour SLA of a new tool dropping; built the customer-outreach system on Customer.io, lifting user retention by 8%.
+- **AI Engineer — Peach** (May 2025 – Jan 2026, Delhi). Led AI backend and agent orchestration, processing 15,000+ submissions in production; automated grading that scored 5,000+ worksheets at 92% rubric accuracy; image and video analysis pipelines adopted by 20+ NGO partners; live agentic workflows for personalized learning paths (cut manual intervention per session 60%).
+- **GenAI Engineer — HYRGPT** (May 2024 – May 2025, Remote). Production voice AI assistant handling real-time Hinglish conversations at 1.5-second end-to-end latency for 500 daily active users; resume retrieval & ranking via vector embeddings + metadata filtering; speech-to-text + summarization with diarization (~70% faster turnaround); RAG pipeline cut LLM inference cost ~60%.
+- **AI Research Intern — Sultan Qaboos University** (Jun – Aug 2024, Muscat, Oman). Career-recommendation system (psychometric + LLM reasoning); evaluated recommendation quality across cultural contexts; multimodal text + image inputs.
+- **Research Intern — CSIR-IHBT** (May – Jun 2024, Palampur, India). React clinical-analytics dashboard for Alzheimer's screening; optimized frontend and backend for ~60% better page-load performance; IoT-assisted health monitoring with Raspberry Pi.
 
 ## Selected work
 

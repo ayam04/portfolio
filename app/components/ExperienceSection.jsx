@@ -8,9 +8,9 @@ const roles = [
     title: "AI SDE",
     company: "myAIcademy",
     points: [
-      "Lead development of a B2C app for learning every AI tool on the market.",
+      "Led development of a Flutter and web AI-learning platform to 10,000+ students onboarded and 50,000+ learning sessions.",
       "Built a course-automation system that generates and ships persona-tailored courses within a 72-hour SLA of a new tool dropping.",
-      "Built the customer-outreach system (customer.io), helping retain ~8% more users.",
+      "Built the customer-outreach system on Customer.io, lifting user retention by 8%.",
     ],
   },
   {
@@ -19,9 +19,10 @@ const roles = [
     title: "AI Engineer",
     company: "Peach",
     points: [
-      "Engineered and deployed live agentic workflows for personalized learning paths — reduced user intervention by ~60%.",
-      "Integrated Multi-Context Prompt Stacks (MCPS) to optimize multi-turn LLM reasoning, improving accuracy and coherence on complex queries.",
-      "Built scalable backend services for LLM-driven content generation and evaluation — cut latency by ~40%.",
+      "Led AI backend and agent orchestration for the learning platform, processing 15,000+ submissions in production.",
+      "Built an automated grading system that scored 5,000+ worksheets at 92% rubric accuracy, removing manual review from the critical path.",
+      "Shipped image and video analysis pipelines adopted by 20+ NGO partners for field-submitted media.",
+      "Engineered live agentic workflows for personalized learning paths, cutting manual intervention per session by 60%.",
     ],
   },
   {
@@ -30,7 +31,7 @@ const roles = [
     title: "GenAI Engineer",
     company: "HYRGPT",
     points: [
-      "Built an on-call voice assistant for recruitment workflows — improved shortlisting efficiency by ~90%.",
+      "Built a production voice AI assistant handling real-time Hinglish conversations at 1.5-second end-to-end latency for 500 daily active users.",
       "Built a resume retrieval & ranking system using vector embeddings with metadata filtering and relevance heuristics.",
       "Designed a speech-to-text + summarization pipeline with speaker diarization and async inference — ~70% faster turnaround.",
       "Cut LLM inference cost ~60% with a RAG pipeline built on curated datasets, custom scrapers, and eval-driven prompt iteration.",
@@ -39,22 +40,22 @@ const roles = [
   {
     period: "Jun 2024 — Aug 2024",
     place: "Muscat, Oman",
-    title: "AI Research",
+    title: "AI Research Intern",
     company: "Sultan Qaboos University",
     points: [
       "Developed a career-recommendation system combining psychometric signals, structured data, and LLM reasoning.",
-      "Ran systematic evaluation across cultural contexts — improved prediction reliability ~85% over baseline heuristics.",
+      "Evaluated recommendation quality across cultural contexts to improve personalization and interpretability.",
       "Integrated multimodal inputs (text + image) for richer, more interpretable recommendations.",
     ],
   },
   {
     period: "May 2024 — Jun 2024",
-    place: "India",
-    title: "Researcher",
+    place: "Palampur, India",
+    title: "Research Intern",
     company: "CSIR-IHBT",
     points: [
       "Built a React clinical-analytics dashboard for Alzheimer's screening with authenticated access and real-time visualization.",
-      "Improved lab website performance and UX by ~60% through frontend and backend optimizations.",
+      "Optimized the lab website across frontend and backend, improving page-load performance by 60%.",
       "Explored IoT-assisted health monitoring with Raspberry Pi for data collection and preprocessing.",
     ],
   },
