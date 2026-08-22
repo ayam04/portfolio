@@ -12,12 +12,41 @@ const EmailSection = () => {
   useEffect(() => {
     (async () => {
       const cal = await getCalApi({ namespace: "30min" });
-      cal("ui", {
-        hideEventTypeDetails: false,
+      const ui = {
+        // Duration/medium are stated in the section header instead, so the
+        // widget's own meta panel is redundant dead space.
+        hideEventTypeDetails: true,
         layout: "month_view",
         theme: "light",
-        cssVarsPerTheme: { light: { "cal-brand": "#2540ff" } },
-      });
+        // Repaint the embed in the site's paper/ink palette. Alpha borders are
+        // pre-blended over --paper since these land inside a cross-origin frame.
+        cssVarsPerTheme: {
+          light: {
+            "cal-brand": "#2540ff",
+            "cal-brand-emphasis": "#1c33d6",
+            "cal-brand-text": "#ffffff",
+            "cal-bg": "#f3eee3",
+            "cal-bg-emphasis": "#e2dbcb",
+            "cal-bg-subtle": "#e8e1d3",
+            "cal-bg-muted": "#ece6da",
+            "cal-bg-inverted": "#111014",
+            "cal-text": "#111014",
+            "cal-text-emphasis": "#111014",
+            "cal-text-subtle": "#666462",
+            "cal-text-muted": "#8d8a86",
+            "cal-text-inverted": "#f3eee3",
+            "cal-border": "#d3cfc6",
+            "cal-border-emphasis": "#b4b0a9",
+            "cal-border-subtle": "#dcd8ce",
+            "cal-border-muted": "#e3ded4",
+            "cal-border-booker": "#d3cfc6",
+          },
+        },
+      };
+      // The embed drops a ui config that lands before its iframe is ready, and
+      // this call races that load. Re-apply once the booker reports ready.
+      cal("ui", ui);
+      cal("on", { action: "linkReady", callback: () => cal("ui", ui) });
     })();
   }, []);
 
@@ -129,12 +158,19 @@ const EmailSection = () => {
       </div>
 
       {/* Inline booking calendar */}
-      <div className="mt-20 md:mt-28">
-        <div className="flex items-center gap-2.5 mb-8">
-          <Calendar className="w-4 h-4 text-ink/45" />
-          <span className="eyebrow text-ink/45">Book a call</span>
-        </div>
-        <div className="border border-[var(--line)] bg-paper-pure">
+      <div className="mt-24 md:mt-32 border-t border-[var(--line)] pt-10 md:pt-12">
+        {/* The booker has a fixed natural width, so the header shares its column
+            to keep the block on the page's left rail instead of floating. */}
+        <div className="max-w-[820px]">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3 mb-10 md:mb-12">
+            <div className="flex items-center gap-3">
+              <Calendar className="w-4 h-4 text-ink/45 shrink-0" />
+              <span className="eyebrow text-ink/45">Book a call</span>
+            </div>
+            <p className="text-sm font-light text-ink/55">
+              30 minutes · Cal Video · your local timezone
+            </p>
+          </div>
           <Cal
             namespace="30min"
             calLink="ayam04/30min"
