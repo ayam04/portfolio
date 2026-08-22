@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { getCalApi } from "@calcom/embed-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import { ArrowUpRight, Calendar } from "lucide-react";
 
 const EmailSection = () => {
@@ -79,18 +79,6 @@ const EmailSection = () => {
             </p>
           </div>
 
-          <button
-            type="button"
-            data-cal-namespace="30min"
-            data-cal-link="ayam04/30min"
-            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-            className="cursor-grow group inline-flex items-center gap-2.5 rounded-full border border-ink/25 px-6 py-3.5 text-sm uppercase tracking-[0.14em] hover:border-ink transition-colors"
-          >
-            <Calendar className="w-4 h-4" />
-            Book a call
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </button>
-
           <div className="space-y-px bg-[var(--line)] border border-[var(--line)]">
             <a href="mailto:ayamullahkhan04@gmail.com" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
               <span><span className="eyebrow text-ink/45 block mb-1">Email</span><span className="font-light">ayamullahkhan04@gmail.com</span></span>
@@ -137,6 +125,22 @@ const EmailSection = () => {
               </button>
             </form>
           )}
+        </div>
+      </div>
+
+      {/* Inline booking calendar */}
+      <div className="mt-20 md:mt-28">
+        <div className="flex items-center gap-2.5 mb-8">
+          <Calendar className="w-4 h-4 text-ink/45" />
+          <span className="eyebrow text-ink/45">Book a call</span>
+        </div>
+        <div className="border border-[var(--line)] bg-paper-pure">
+          <Cal
+            namespace="30min"
+            calLink="ayam04/30min"
+            style={{ width: "100%", height: "100%", overflow: "scroll" }}
+            config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
+          />
         </div>
       </div>
     </section>
