@@ -1,12 +1,25 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { getCalApi } from "@calcom/embed-react";
 import { ArrowUpRight, Calendar } from "lucide-react";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+        theme: "light",
+        cssVarsPerTheme: { light: { "cal-brand": "#2540ff" } },
+      });
+    })();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,16 +79,17 @@ const EmailSection = () => {
             </p>
           </div>
 
-          <Link
-            href="https://cal.com/ayam04"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            data-cal-namespace="30min"
+            data-cal-link="ayam04/30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
             className="cursor-grow group inline-flex items-center gap-2.5 rounded-full border border-ink/25 px-6 py-3.5 text-sm uppercase tracking-[0.14em] hover:border-ink transition-colors"
           >
             <Calendar className="w-4 h-4" />
             Book a call
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
+          </button>
 
           <div className="space-y-px bg-[var(--line)] border border-[var(--line)]">
             <a href="mailto:ayamullahkhan04@gmail.com" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
