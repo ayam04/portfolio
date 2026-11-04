@@ -34,7 +34,7 @@ const ShowreelSection = () => {
           loop
           playsInline
           preload="metadata"
-          aria-label="Ayamullah Khan — AI engineer showreel"
+          aria-label="Ayamullah Khan — full-stack and AI engineer showreel"
           className="w-full aspect-video object-cover block"
         />
       </motion.div>

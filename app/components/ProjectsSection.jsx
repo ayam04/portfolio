@@ -22,6 +22,32 @@ const projectsData = [
   },
   {
     id: 2,
+    title: "oorik ERP",
+    description:
+      "Multi-tenant SaaS ERP for Indian SMBs, built from an empty repo to production. Hono API on PostgreSQL with Drizzle, 22 incremental migrations with row-level tenant isolation, Better Auth organisations, and Razorpay subscription billing.",
+    image: "/images/projects/oorik-erp.svg",
+    tag: ["All", "Full-Stack"],
+    category: "Full-Stack",
+    stack: ["Hono", "PostgreSQL", "Drizzle", "Razorpay"],
+    gitUrl: "",
+    previewUrl: "https://erp.oorik.in",
+    featured: true,
+  },
+  {
+    id: 9,
+    title: "tech-doc-ocr",
+    description:
+      "Document delta and grounded chat over engineering drawing revisions. Ingests native PDF, scanned PDF and DXF, computes a confidence-scored delta with a redline overlay, and answers questions with citations. 0.91 precision at 0.97 recall on production P&IDs.",
+    image: "/images/projects/tech-doc-ocr.svg",
+    tag: ["All", "GenAI"],
+    category: "GenAI",
+    stack: ["Python", "OCR", "LLM", "Evals"],
+    gitUrl: "https://github.com/ayam04/tech-doc-ocr",
+    previewUrl: "",
+    featured: false,
+  },
+  {
+    id: 10,
     title: "Deal Dossier Generator",
     description:
       "Drop a company domain and get a meeting-ready deal dossier. Streams structured output from Gemini with Google Search grounding into an interactive signals timeline.",
@@ -31,7 +57,7 @@ const projectsData = [
     stack: ["Next.js", "Gemini", "Grounding", "Streaming"],
     gitUrl: "https://github.com/ayam04/dossier",
     previewUrl: "https://dossier.ayamk.in",
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -141,13 +167,13 @@ const ProjectsSection = () => {
           </h2>
         </div>
         <p className="md:col-span-4 text-base md:text-lg font-light text-ink/70 leading-relaxed md:pb-3">
-          AI products, agentic systems, and security tooling. Real code, real users.
+          Production SaaS, agentic systems, and security tooling. Real code, real users.
         </p>
       </div>
 
       {/* Filters */}
       <div className="flex flex-wrap gap-3 mb-12">
-        {["All", "GenAI", "ML", "Security"].map((t) => (
+        {["All", "Full-Stack", "GenAI", "ML", "Security"].map((t) => (
           <ProjectTag key={t} name={t} onClick={setTag} isSelected={tag === t} />
         ))}
       </div>

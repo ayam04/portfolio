@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#111014"/>
+  <rect x="96" y="120" width="72" height="4" fill="#f3eee3"/>
+  <text x="96" y="200" font-family="monospace" font-size="26" letter-spacing="6" fill="#f3eee3" opacity="0.5">DOCUMENT INTELLIGENCE</text>
+  <text x="96" y="340" font-family="Arial, Helvetica, sans-serif" font-size="112" font-weight="700" fill="#f3eee3">tech-doc-ocr</text>
+  <text x="96" y="470" font-family="monospace" font-size="30" fill="#f3eee3" opacity="0.62">PDF, scanned PDF and DXF revisions</text><text x="96" y="522" font-family="monospace" font-size="30" fill="#f3eee3" opacity="0.62">Confidence-scored delta + redlines</text><text x="96" y="574" font-family="monospace" font-size="30" fill="#f3eee3" opacity="0.62">Grounded chat with citations</text>
+</svg>

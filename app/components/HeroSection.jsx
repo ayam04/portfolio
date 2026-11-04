@@ -40,7 +40,7 @@ const HeroSection = () => {
         className="flex items-center justify-between"
       >
         <Marker>©2026</Marker>
-        <Marker className="hidden md:inline">Fine-Tuning · Quantization · Agents · MLOps</Marker>
+        <Marker className="hidden md:inline">Go · TypeScript · Python · LLM Systems</Marker>
         <Marker>New Delhi, IN</Marker>
       </motion.div>
 
@@ -85,13 +85,13 @@ const HeroSection = () => {
               priority
               quality={90}
               sizes="160px"
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+              className="object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700"
             />
           </motion.div>
 
           <div className="flex justify-start">
             <Marker className="hidden md:block leading-relaxed">
-              Open to<br />AI/ML roles
+              Open to<br />engineering roles
             </Marker>
           </div>
         </div>
@@ -107,7 +107,7 @@ const HeroSection = () => {
           >
             Khan
             <span className="font-serif-italic text-signal normal-case tracking-normal text-[0.34em]">
-              AI engineer
+              Full-Stack &amp; AI Engineer
             </span>
           </motion.h1>
         </div>
@@ -122,8 +122,8 @@ const HeroSection = () => {
         className="grid md:grid-cols-12 gap-8 items-end border-t border-[var(--line)] pt-7"
       >
         <p className="md:col-span-6 text-lg md:text-xl font-light leading-snug text-ink/80 max-w-xl">
-          I <span className="text-ink font-normal">fine-tune, quantize &amp; ship large language models</span> —
-          and build the agentic systems and full-stack products around them. AI tools used by 2,500+ people.
+          I <span className="text-ink font-normal">ship production systems end to end</span> in Go, TypeScript and Python,
+          from data model and API design to deployment, with LLM and agent features built in. 10,000+ students onboarded on a platform I owned.
         </p>
 
         <div className="md:col-span-6 flex flex-col sm:flex-row md:justify-end gap-3">
@@ -132,7 +132,7 @@ const HeroSection = () => {
             className="cursor-grow group inline-flex items-center justify-between gap-4 rounded-full bg-signal text-paper-pure px-6 py-4 text-sm uppercase tracking-[0.16em] hover:bg-signal-deep transition-colors"
           >
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-paper-pure animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-paper-pure" />
               Open to roles
             </span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -30,7 +30,7 @@ const Navbar = () => {
       className="fixed inset-x-0 top-3 md:top-5 z-50 flex justify-center px-4 pointer-events-none"
     >
       <div
-        className={`pointer-events-auto flex items-center gap-1 rounded-full bg-ink text-paper py-1.5 pl-5 pr-1.5 transition-all duration-500 ${
+        className={`pointer-events-auto flex items-center gap-1 rounded-full bg-ink text-paper py-1.5 pl-5 pr-1.5 transition-shadow duration-500 ${
           scrolled ? "shadow-[0_12px_40px_-12px_rgba(0,0,0,0.6)]" : ""
         }`}
       >
@@ -39,7 +39,7 @@ const Navbar = () => {
           href="/"
           className="font-display text-sm font-medium tracking-tight pr-3 md:pr-5 flex items-center gap-2"
         >
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-signal animate-pulse" />
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-signal" />
           Ayamullah Khan
         </Link>
 

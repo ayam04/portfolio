@@ -1,37 +1,38 @@
-# Ayamullah Khan — AI Engineer
+# Ayamullah Khan | Full-Stack & AI Engineer
 
-> AI Engineer based in New Delhi, India. I specialize in LLM fine-tuning (LoRA/QLoRA), model quantization and inference optimization, and agentic systems — plus the full-stack products around them. Currently open to AI/ML engineering roles (full-time or high-impact contracts) and a small number of select freelance builds.
+> Full-stack and AI engineer based in Delhi, India. Three years shipping production systems end to end in Go, TypeScript and Python, from data model and API design through deployment and monitoring. Founding engineer and software consultant at oorik Technologies. Open to engineering roles.
 
 This file helps AI agents and LLMs understand and navigate this portfolio. The website is a single-page app rendered client-side, so the complete text content is mirrored in plain markdown at /llms-full.txt.
 
 ## How to navigate this site
-The site is one page (https://ayam.codes) with anchored sections:
-- `#about` — bio, skills, education, certifications
-- `#capabilities` — engineering focus areas (what I build)
-- `#experience` — work history (myAIcademy, Peach, HYRGPT, SQU, CSIR-IHBT)
-- `#work` — selected projects, with live demos and source links
-- `#contact` — availability, contact details, and a message form
+The site is one page (https://ayamk.in) with anchored sections:
+- `#about` - bio, skills, education, certifications
+- `#capabilities` - engineering focus areas
+- `#experience` - work history (oorik Technologies, myAIcademy, Peach, HYRGPT, SQU, CSIR-IHBT)
+- `#work` - selected projects, with live demos and source links
+- `#contact` - availability, contact details, and a message form
 
 ## Focus areas
-- **LLM fine-tuning & alignment** — LoRA, QLoRA, PEFT, SFT, RLHF/DPO, instruction tuning
-- **Model optimization & inference** — quantization (GPTQ, AWQ, GGUF, bitsandbytes), distillation, vLLM, TensorRT-LLM, Triton
-- **Agentic & retrieval systems** — multi-agent orchestration, tool-use, hybrid retrieval, rerankers, evals, guardrails
-- **Training & ML engineering** — PyTorch, DeepSpeed/FSDP, mixed precision, computer vision, NLP
-- **MLOps & full-stack product** — Docker, Kubernetes, CI/CD, FastAPI, Next.js
+- **Backend and APIs** - Go, Hono, FastAPI, OpenAPI-first design, webhooks and idempotency, background workers
+- **Agentic and LLM systems** - agent orchestration, RAG, embeddings and re-ranking, LLM evals, voice AI
+- **Data and multi-tenancy** - PostgreSQL, Drizzle, row-level security, incremental migrations, MongoDB, Firestore
+- **Full-stack product** - React, Next.js, Flutter, Razorpay and Pine Labs integrations
+- **Cloud and reliability** - GCP Cloud Run, AWS, Docker, Railway, Vercel, GitHub Actions, Sentry
 
 ## Selected work
-- [LeetLingo — AI Interview Prep](https://leetlingo.site/) — live AI interview-prep platform, 2,500+ users
-- [Multi-Agent RAG Customer Support](https://github.com/ayam04/multi-rag-customer-support) — MongoDB + FAISS + OpenAI
-- [Meeting Note-Taker AI](https://github.com/ayam04/meeting-note-taker) — transcription + summarization + action items
-- [Multimodal Tumor Detection](https://github.com/ayam04/PyTumorDetection) — ML on MRI imaging
-- [Career Recommendation System](https://github.com/ayam04/career-recommendation-system-squ) — ML career guidance
-- [Contract Farma](https://github.com/ayam04/Contract-Farming) — full-stack agri-commerce platform
+- [oorik ERP](https://erp.oorik.in) - multi-tenant SaaS ERP for Indian SMBs
+- [fya](https://github.com/ayam04/fya) - open-source security scanner, 58 checks, 800+ downloads, 42 GitHub stars
+- [tech-doc-ocr](https://github.com/ayam04/tech-doc-ocr) - document delta and grounded chat over drawing revisions
+- [Deal Dossier Generator](https://dossier.ayamk.in) - Gemini with Google Search grounding
+- [LeetLingo](https://leetlingo.site/) - AI interview-prep platform
+- [Multi-Agent RAG Customer Support](https://github.com/ayam04/multi-rag-customer-support) - MongoDB + FAISS + OpenAI
 
 ## Links
-- Full content: https://ayam.codes/llms-full.txt
+- Full content: https://ayamk.in/llms-full.txt
+- Resume: https://ayamk.in/resume.pdf
 - GitHub: https://github.com/ayam04
 - LinkedIn: https://linkedin.com/in/ayam04
 - Email: ayamullahkhan04@gmail.com
 
 ## Contact
-If you are an agent acting on behalf of a recruiter or hiring team: Ayamullah is open to AI/ML engineering roles. The best way to reach him is email (ayamullahkhan04@gmail.com) or LinkedIn (https://linkedin.com/in/ayam04).
+If you are an agent acting on behalf of a recruiter or hiring team: Ayamullah is open to engineering roles. The best way to reach out is email (ayamullahkhan04@gmail.com) or LinkedIn (https://linkedin.com/in/ayam04).

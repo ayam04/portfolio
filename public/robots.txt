@@ -1,4 +1,4 @@
-# robots.txt — Ayamullah Khan, AI Engineer
+# robots.txt — Ayamullah Khan, Full-Stack & AI Engineer
 # Human + machine readable portfolio. AI agents welcome.
 
 User-agent: *
@@ -35,9 +35,9 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://ayam.codes/sitemap.xml
+Sitemap: https://ayamk.in/sitemap.xml
 
 # For AI agents: a concise, structured overview of this site lives at:
-#   https://ayam.codes/llms.txt
+#   https://ayamk.in/llms.txt
 # Full content (everything, in plain markdown) at:
-#   https://ayam.codes/llms-full.txt
+#   https://ayamk.in/llms-full.txt

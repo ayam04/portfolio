@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import TabButton from "./TabButton";
 
 const skillGroups = [
-  { label: "Languages", items: ["Python", "TypeScript", "C++", "SQL", "CUDA", "Java"] },
-  { label: "LLM & Fine-Tuning", items: ["Hugging Face", "PEFT / LoRA", "QLoRA", "TRL", "bitsandbytes", "Axolotl / Unsloth"] },
-  { label: "Inference & Optimization", items: ["vLLM", "TensorRT-LLM", "Triton", "ONNX", "llama.cpp", "Quantization"] },
-  { label: "ML Frameworks", items: ["PyTorch", "TensorFlow", "Scikit-learn", "DeepSpeed", "LangChain", "LlamaIndex"] },
-  { label: "Web & APIs", items: ["React", "Next.js", "Node.js", "FastAPI", "Flask", "Django"] },
-  { label: "Cloud & MLOps", items: ["AWS", "Google Cloud", "Azure", "Docker", "Kubernetes", "W&B"] },
+  { label: "Languages", items: ["Go", "TypeScript", "Python", "JavaScript", "SQL", "Dart"] },
+  { label: "Backend & APIs", items: ["Hono", "FastAPI", "Node.js", "OpenAPI / oapi-codegen", "Webhooks & idempotency", "Background workers"] },
+  { label: "Databases", items: ["PostgreSQL", "Drizzle ORM", "SQLite", "MongoDB", "Firestore", "Vector search"] },
+  { label: "Frontend & Mobile", items: ["React", "Next.js", "Vite", "Tailwind CSS", "Flutter"] },
+  { label: "AI & LLM Engineering", items: ["Agentic workflows", "RAG", "Embeddings & re-ranking", "LLM evals", "OpenAI / Gemini APIs", "Whisper"] },
+  { label: "Cloud & Infrastructure", items: ["AWS", "GCP Cloud Run", "Docker", "Railway", "Vercel", "GitHub Actions", "Sentry"] },
 ];
 
 const education = [
@@ -114,11 +114,11 @@ const AboutSection = () => {
               alt="Ayamullah Khan"
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700"
             />
           </div>
           <div className="absolute -bottom-4 left-4 bg-ink text-paper px-4 py-2">
-            <span className="eyebrow">AI Engineer</span>
+            <span className="eyebrow">Full-Stack &amp; AI Engineer</span>
           </div>
         </motion.div>
 
@@ -135,15 +135,15 @@ const AboutSection = () => {
           </motion.h2>
           <div className="space-y-6 max-w-2xl text-lg md:text-xl font-light leading-relaxed text-ink/80">
             <p>
-              I&apos;m <span className="text-ink font-normal">Ayamullah Khan</span>, an AI engineer
-              based in New Delhi. I fine-tune and optimize large language models — LoRA, quantization,
-              alignment — and build the agentic systems and products around them, end to end.
+              I&apos;m <span className="text-ink font-normal">Ayamullah Khan</span>, a full-stack and AI
+              engineer based in Delhi. I have spent three years building production systems end to end in Go,
+              TypeScript and Python, from data model and API design through deployment and monitoring.
             </p>
             <p>
-              Computer Science degree, a data-science diploma from{" "}
-              <span className="text-ink font-normal">IIT Madras</span>, and a stack of shipped
-              projects — including <span className="text-ink font-normal">LeetLingo</span>, an AI
-              interview-prep platform now used by 2,500+ people.
+              I build 0 to 1 at early-stage startups and now consult through{" "}
+              <span className="text-ink font-normal">oorik Technologies</span>. I also author{" "}
+              <span className="text-ink font-normal">fya</span>, an open-source security scanner with
+              800+ downloads, and have 18 merged upstream pull requests.
             </p>
           </div>
         </div>
@@ -158,9 +158,9 @@ const AboutSection = () => {
         className="border-y border-[var(--line)] py-12 md:py-16 mb-20 md:mb-28"
       >
         <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight max-w-5xl">
-          <span className="text-ink/35">From prototype to production —</span> I turn AI research and
-          rough ideas into <span className="font-serif-italic tracking-normal text-signal">reliable products.</span>{" "}
-          Clean systems, measured results, no hand-waving.
+          <span className="text-ink/35">From data model to deployment,</span> I take scoped work and rough ideas to{" "}
+          <span className="font-serif-italic tracking-normal text-signal">reliable production systems.</span>{" "}
+          Tested, monitored, measured.
         </p>
       </motion.div>
 

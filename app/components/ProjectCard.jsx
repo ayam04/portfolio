@@ -17,7 +17,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, index, ca
           src={imgUrl}
           alt={title}
           fill
-          className="object-cover grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          className="object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
           sizes={featured ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
           quality={80}
           loading="lazy"

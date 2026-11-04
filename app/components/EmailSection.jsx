@@ -100,9 +100,9 @@ const EmailSection = () => {
         {/* Left — availability + links */}
         <div className="lg:col-span-5 space-y-10">
           <div className="flex items-start gap-3">
-            <span className="mt-2 w-2.5 h-2.5 rounded-full bg-signal shrink-0 animate-pulse" />
+            <span className="mt-2 w-2.5 h-2.5 rounded-full bg-signal shrink-0" />
             <p className="text-lg md:text-xl font-light leading-relaxed text-ink/80">
-              I&apos;m currently <span className="text-ink font-normal">open to AI/ML engineering roles</span>
+              I&apos;m currently <span className="text-ink font-normal">open to full-stack and AI engineering roles</span>
               {" "}— full-time or high-impact contracts. I also take on a small number of{" "}
               <span className="text-ink font-normal">select freelance builds</span>.
             </p>
@@ -111,15 +111,15 @@ const EmailSection = () => {
           <div className="space-y-px bg-[var(--line)] border border-[var(--line)]">
             <a href="mailto:ayamullahkhan04@gmail.com" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
               <span><span className="eyebrow text-ink/45 block mb-1">Email</span><span className="font-light">ayamullahkhan04@gmail.com</span></span>
-              <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[color,transform]" />
             </a>
             <Link href="https://linkedin.com/in/ayam04" target="_blank" rel="noopener noreferrer" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
               <span><span className="eyebrow text-ink/45 block mb-1">LinkedIn</span><span className="font-light">/in/ayam04</span></span>
-              <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[color,transform]" />
             </Link>
             <Link href="https://github.com/ayam04" target="_blank" rel="noopener noreferrer" className="cursor-grow group flex items-center justify-between bg-paper px-5 py-5 hover:bg-paper-dim transition-colors">
               <span><span className="eyebrow text-ink/45 block mb-1">GitHub</span><span className="font-light">@ayam04</span></span>
-              <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-4 h-4 text-ink/40 group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[color,transform]" />
             </Link>
           </div>
 

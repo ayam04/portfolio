@@ -4,33 +4,33 @@ import { motion } from "framer-motion";
 const capabilities = [
   {
     no: "01",
-    title: "Fine-Tuning & Alignment",
-    desc: "Adapting foundation models to a domain and task — parameter-efficient fine-tuning, preference alignment, and the dataset work that actually moves the needle.",
-    tags: ["LoRA", "QLoRA", "PEFT", "SFT", "RLHF / DPO", "Instruction tuning"],
+    title: "Backend & APIs",
+    desc: "OpenAPI-first REST services in Go and TypeScript, with generated clients, idempotent webhooks, and background workers that hold up in production.",
+    tags: ["Go", "Hono", "FastAPI", "oapi-codegen", "Webhooks", "Workers"],
   },
   {
     no: "02",
-    title: "Model Optimization & Inference",
-    desc: "Making models small and fast enough to ship — quantization, distillation, and high-throughput serving that holds up under real latency and cost budgets.",
-    tags: ["GPTQ", "AWQ", "GGUF", "bitsandbytes", "vLLM", "TensorRT-LLM"],
+    title: "Agentic & LLM Systems",
+    desc: "Agent orchestration, grounded retrieval, and voice AI, with offline evals and prompt iteration driving the decisions.",
+    tags: ["Agents", "RAG", "Re-ranking", "Evals", "Whisper", "Gemini / OpenAI"],
   },
   {
     no: "03",
-    title: "Agentic & Retrieval Systems",
-    desc: "LLM systems that do real work — multi-agent orchestration, tool-use, and grounded retrieval with rerankers, evals, and guardrails. (Plain RAG is table stakes.)",
-    tags: ["Multi-agent", "Tool-use", "Hybrid retrieval", "Rerankers", "Evals", "Guardrails"],
+    title: "Data & Multi-Tenancy",
+    desc: "Schema design, incremental migrations, and row-level tenant isolation, from PostgreSQL to Firestore to vector search.",
+    tags: ["PostgreSQL", "Drizzle", "RLS", "MongoDB", "Firestore", "Vector search"],
   },
   {
     no: "04",
-    title: "Training & ML Engineering",
-    desc: "From data to model — distributed training, mixed precision, and classical ML / CV / NLP for when a 70B model is the wrong tool for the job.",
-    tags: ["PyTorch", "DeepSpeed / FSDP", "Mixed precision", "Computer Vision", "NLP", "W&B"],
+    title: "Full-Stack Product",
+    desc: "Web and mobile products with the money paths done right: subscription billing, UPI and card-terminal payments, GST-correct pricing.",
+    tags: ["React", "Next.js", "Flutter", "Tailwind", "Razorpay", "Pine Labs"],
   },
   {
     no: "05",
-    title: "MLOps & Full-Stack Product",
-    desc: "Getting it to production and keeping it healthy — containerized GPU services, pipelines, observability, and the full-stack product the model actually lives in.",
-    tags: ["Docker", "Kubernetes", "Triton", "CI/CD", "FastAPI", "Next.js"],
+    title: "Cloud & Reliability",
+    desc: "Shipping and keeping it healthy: containers, CI/CD gated by tests, and error tracking from day one.",
+    tags: ["GCP Cloud Run", "AWS", "Docker", "Railway", "GitHub Actions", "Sentry"],
   },
 ];
 
@@ -46,7 +46,7 @@ const CapabilitiesSection = () => {
           </h2>
         </div>
         <p className="md:col-span-4 text-base md:text-lg font-light text-ink/70 leading-relaxed md:pb-3">
-          Full-spectrum AI engineering — from training and tuning to quantized production inference.
+          Backend, data, AI and product work, taken from technical design through deployment and monitoring.
         </p>
       </div>
 

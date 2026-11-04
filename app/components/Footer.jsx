@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-12 gap-12 pb-16 border-b border-paper/15">
           <div className="md:col-span-6">
             <div className="flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 rounded-full bg-signal animate-pulse" />
-              <span className="eyebrow text-paper/60">Available for AI/ML roles</span>
+              <span className="w-2 h-2 rounded-full bg-signal" />
+              <span className="eyebrow text-paper/60">Available for engineering roles</span>
             </div>
             <p className="font-display text-2xl md:text-3xl tracking-tight max-w-md leading-snug">
               Building intelligent products from prototype to production.

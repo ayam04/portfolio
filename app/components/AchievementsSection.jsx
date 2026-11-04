@@ -4,10 +4,10 @@ import { motion, useInView, animate } from "framer-motion";
 import Marquee from "./Marquee";
 
 const stats = [
-  { value: 20, suffix: "+", label: "Projects shipped", sub: "AI & web, across domains" },
-  { value: 2500, suffix: "+", label: "People reached", sub: "Live products in the wild" },
-  { value: 12, suffix: "+", label: "Certifications", sub: "IBM · Google · Azure" },
-  { value: 3, suffix: "+", label: "Years building", sub: "And compounding fast" },
+  { value: 10000, suffix: "+", label: "Students onboarded", sub: "myAIcademy platform" },
+  { value: 15000, suffix: "+", label: "Submissions processed", sub: "Agent orchestration at Peach" },
+  { value: 18, suffix: "", label: "Merged upstream PRs", sub: "Go, Python and TypeScript" },
+  { value: 800, suffix: "+", label: "fya downloads", sub: "Open-source security scanner" },
 ];
 
 const Stat = ({ value, suffix, label, sub, index }) => {
@@ -48,7 +48,7 @@ const AchievementsSection = () => {
   return (
     <section className="section-dark">
       <Marquee
-        items={["Fine-Tuning", "Quantization", "LoRA / QLoRA", "Multi-Agent", "RLHF / DPO", "vLLM", "Distillation", "Distributed Training", "MLOps"]}
+        items={["Go", "TypeScript", "Python", "PostgreSQL", "Agentic Workflows", "RAG", "Voice AI", "Multi-Tenant SaaS", "Open Source"]}
         className="py-6 border-b border-paper/15 text-paper/70"
         textClass="text-2xl md:text-4xl"
       />

@@ -290,7 +290,7 @@ const CTA: React.FC = () => (
           borderRadius: 999,
         }}
       >
-        ayam.codes
+        ayamk.in
       </div>
     </FadeIn>
   </AbsoluteFill>
